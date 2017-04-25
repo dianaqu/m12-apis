@@ -1,11 +1,13 @@
 ### Exercise 3 ###
 
 # libraries
+# install.packages('dplyr')
 library(dplyr)
 
 # We'll be using the mtcars dataset -- adding rowname as a column
-vehicle <- add_rownames(mtcars, var='car')
-
+# vehicle <- add_rownames(mtcars, var='car')
+mtcars$car <- rownames(mtcars)
+vehicle <- mtcars
 
 ######## buggy ######### ----------------------------------------------
 
